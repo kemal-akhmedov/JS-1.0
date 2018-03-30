@@ -21,6 +21,13 @@ var mainList = {
 	open: false
 }
 
+var employers = {
+	first: [],
+	second: [],
+	third: [],
+	fourth: []
+}
+
 function chooseGoods() {
 	for ( var i = 0; i < 5; i++) {
 			mainList.shopGoods[i] = prompt("Какой ти товара вы хотите продать?");
@@ -49,6 +56,11 @@ function workTime() {
 
 workTime();
 
+function budgetDay(a){
 
-alert(money / 30);
+	return  a/30
+}
+
+alert(budgetDay(mainList.budget));
+console.log(budgetDay(mainList.budget));
 console.log(mainList);
