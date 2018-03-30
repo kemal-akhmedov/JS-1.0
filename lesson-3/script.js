@@ -1,4 +1,4 @@
-var money, stName, time;
+var money, stName, time, price = 1000;
 
 
 function start() {
@@ -18,14 +18,8 @@ var mainList = {
 	storeName: stName,
 	shopGoods: [],
 	employers: {},
-	open: false
-}
-
-var employers = {
-	first: [],
-	second: [],
-	third: [],
-	fourth: []
+	open: false,
+	discount: true
 }
 
 function chooseGoods() {
@@ -56,11 +50,26 @@ function workTime() {
 
 workTime();
 
+function workers() {
+	for (var i = 1; i < 5; i++) {
+	 	var question = prompt('Имя сотрудника №');
+	 	mainList.employers[i] = question;
+	}
+}
+workers();
+
+function discount(price) {
+	if (mainList.discount ) {
+	return price = price * 0.8;
+	}
+}
+
 function budgetDay(a){
 
-	return  a/30
+	return  a/30;
 }
 
 alert(budgetDay(mainList.budget));
 console.log(budgetDay(mainList.budget));
 console.log(mainList);
+console.log(discount(price));
