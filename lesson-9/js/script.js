@@ -80,7 +80,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	let 	more = document.querySelector('.more'),
 		overlay = document.querySelector('.overlay'),
-		close = document.querySelector('.popup-close');
+		close = document.querySelector('.popup-close'),
+		descrBtn = document.querySelectorAll('.description-btn');
 
 	more.addEventListener('click', function() {
 		this.classList.add('more-splash');
@@ -94,5 +95,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	});
 
+
+	for (let i = 0; i < descrBtn.length; i++) {
+		descrBtn[i].addEventListener('click', function() {
+			this.classList.add('more-splash');
+			overlay.style.display = 'block';
+			document.body.style.overflow = 'hidden';
+		});
+	}
 });
 
