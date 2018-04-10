@@ -5,4 +5,4 @@ function showUser(surname, name) {
          alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
 }
  
-showUser.call(age, 'name', 'surname');
+showUser.call(age, 'kemal', 'akhmedov');
