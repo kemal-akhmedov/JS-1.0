@@ -3,8 +3,8 @@ class options{
 		this.height = height
 		this.width = width
 		this.bg = bg
-		this.fontSize = textAlign
-		this.textAlign = fontSize
+		this.fontSize = fontSize
+		this.textAlign = textAlign
 	}
 
 	createDiv(text) {
