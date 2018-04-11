@@ -9,7 +9,7 @@ class options{
 
 	createDiv(text) {
 		let div = document.createElement('div');
-		div.style.cssText = `width: ${this.width}; height: ${this.height}; background: ${this.bg}; font-size: ${this.fontSize}; text-align: ${this.fontSize};`
+		div.style.cssText = `width: ${this.width}; height: ${this.height}; background: ${this.bg}; font-size: ${this.fontSize}; text-align: ${this.textAlign};`
 		document.body.appendChild(div); div.innerHTML = text;
 	}
 
