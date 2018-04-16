@@ -218,32 +218,35 @@ window.addEventListener('DOMContentLoaded', () => {
 				totalValue.innerHTML = 0;
 
 				persons.addEventListener('change', function() {
-					personsSum = +this.value;
+					personsSum = parseInt(this.value);
+					this.value = personsSum;
 					total = (daysSum + personsSum) * 4000;
-					if (restDays.value == '') {
+					if (restDays.value == '' || persons.value == '' || restDays.value <= 0 || persons.value <= 0) {
 						totalValue.innerHTML = 0;
 					} else {
-						totalValue.innerHTML = total;
+						totalValue.innerHTML = total * place.options[place.selectedIndex].value;
 					}
 				});
 
 				restDays.addEventListener('change', function() {
-					daysSum = +this.value;
+					daysSum = parseInt(this.value);
+					this.value = daysSum;
 					total = (daysSum + personsSum) * 4000;
-					if (restDays.value == '') {
+					if (restDays.value == '' || persons.value == '' || restDays.value <= 0 || persons.value <= 0) {
 						totalValue.innerHTML = 0;
 					} else {
-						totalValue.innerHTML = total;
+						totalValue.innerHTML = total * place.options[place.selectedIndex].value;
 					}
 
 				});
 
 				place.addEventListener('change', function() {
-					if (restDays.value == '' || persons.value == '') {
+					if (restDays.value == '' || persons.value == '' || restDays.value <= 0 || persons.value <= 0) {
 						totalValue.innerHTML = 0;
 					} else {
 						let a = total
 						totalValue.innerHTML = a * this.options[this.selectedIndex].value;
+
 					}
 				});
 
